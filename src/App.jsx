@@ -21,7 +21,7 @@ import UserProfile from './components/UserProfile'; // New Sidebar component
 import DashboardCards from './components/DashboardCards'; // New DashboardCards component
 import RecentMovementChart from './components/RecentMovementChart'; // New RecentMovementChart component
 import LatestProjects from './components/LatestProjects'; // New LatestProjects component
-
+import UpgradePrompt from './components/UpgradePrompt'; // New UpgradePrompt component
 const App = () => {
   return (
     <div className="main">
@@ -54,6 +54,9 @@ const App = () => {
 
           {/* Latest Projects Table */}
           <LatestProjects />
+          
+          {/* Upgrade Prompt */}
+          <UpgradePrompt />
         </div>
       </main>
 
