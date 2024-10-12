@@ -17,10 +17,15 @@ import GallerySection from './components/GallerySection';
 import ReviewSection from './components/ReviewSection';
 import BlogSection from './components/BlogSection';
 import Footer from './components/Footer';
+import UserProfile from './components/UserProfile'; // New Sidebar component
+import DashboardCards from './components/DashboardCards'; // New DashboardCards component
+import RecentMovementChart from './components/RecentMovementChart'; // New RecentMovementChart component
+import LatestProjects from './components/LatestProjects'; // New LatestProjects component
 
 const App = () => {
   return (
-    <div>
+    <div className="main">
+      {/* Existing components */}
       <Header />
       <BannerArea />
       <VideoSection />
@@ -28,6 +33,31 @@ const App = () => {
       <GallerySection />
       <ReviewSection />
       <BlogSection />
+
+      {/* New components: User Profile, Dashboard, and Latest Projects */}
+      <main className="content">
+        <div className="container-fluid p-0">
+          <h1 className="h3 mb-3"><strong>Dashboard</strong> Overview</h1>
+          
+          {/* User Profile Component */}
+          <UserProfile />
+
+          {/* Dashboard Cards */}
+          <DashboardCards />
+
+          {/* Recent Movement Chart */}
+          <div className="row">
+            <div className="col-12 col-lg-8 d-flex">
+              <RecentMovementChart />
+            </div>
+          </div>
+
+          {/* Latest Projects Table */}
+          <LatestProjects />
+        </div>
+      </main>
+
+      {/* Existing Footer */}
       <Footer />
     </div>
   );
